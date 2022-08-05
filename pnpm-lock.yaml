@@ -2,12 +2,20 @@ lockfileVersion: 5.4
 
 specifiers:
   '@type-challenges/utils': ^0.1.1
+  typescript: 4.8.0-beta
 
 dependencies:
   '@type-challenges/utils': 0.1.1
+  typescript: 4.8.0-beta
 
 packages:
 
   /@type-challenges/utils/0.1.1:
     resolution: {integrity: sha512-A7ljYfBM+FLw+NDyuYvGBJiCEV9c0lPWEAdzfOAkb3JFqfLl0Iv/WhWMMARHiRKlmmiD1g8gz/507yVvHdQUYA==}
+    dev: false
+
+  /typescript/4.8.0-beta:
+    resolution: {integrity: sha512-Almk3jQ+i+J2/6Nq68M9hr7pYemLJ29pJJ2actTEGQWHSOpfTRDowfWYRZ1cgAXQqcnvygntgD/6odChhNcKlQ==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: false
