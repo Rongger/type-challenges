@@ -38,7 +38,7 @@ type TrimZero<T extends string> = T extends '0' ? T : T extends `${infer F}${inf
 
 type ParseInt<T extends string> = T extends `${infer N extends number}` ? N : never;
 
-type MinusOne<T extends number> = ParseInt<TrimZero<ReverseString<
+export type MinusOne<T extends number> = ParseInt<TrimZero<ReverseString<
 MinusOneInString<ReverseString<`${T}`>>>>
 > 
 

@@ -39,6 +39,20 @@ type res1 = "1" extends `${infer F}${infer S}${infer R}` ? 1 : 2; // 2
 
 - `key in keyof T as never` 可以删除掉对应的 key
 
+- 可以通过 `MergeType` 将交叉类型中的两个对象合并成一个
+
+```ts
+type MergeType<O> = {
+  [P in keyof O]: O[P];
+};
+```
+
+- 对象 value 转 union
+
+```ts
+type ObjectToUnion<T> = T[keyof T];
+```
+
 #### array
 
 - array 的解构方式：`[infer F, ...infer O]`，遍历方式：递归
