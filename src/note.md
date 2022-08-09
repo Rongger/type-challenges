@@ -33,6 +33,12 @@ type NotDistributed = Wrapped<number | boolean>;
 type res1 = "1" extends `${infer F}${infer S}${infer R}` ? 1 : 2; // 2
 ```
 
+- 在字符串模板中使用下标来将数组转联合类型，一样可以分发生成多个字符串
+
+```ts
+`${B}__${E[number]}--${M[number]}`;
+```
+
 #### object
 
 - 用 `T extends Record<PropertyKey, never>` 判断空对象而不是 `T extends {}`
@@ -68,3 +74,12 @@ type ObjectToUnion<T> = T[keyof T];
 - 可以使用泛型来定义新变量
 
 - `keyof (Foo & Bar)` 取 key 并集，`keyof (O | O1)` 取 key 交集
+
+- `type res = never extends string ? 1 : 2; // 1`
+
+- number 范围更大
+
+```ts
+type res = number extends 1 ? 1 : 2; // 2
+type res1 = 1 extends number ? 1 : 2; // 1
+```
