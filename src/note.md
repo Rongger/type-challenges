@@ -83,3 +83,5 @@ type ObjectToUnion<T> = T[keyof T];
 type res = number extends 1 ? 1 : 2; // 2
 type res1 = 1 extends number ? 1 : 2; // 1
 ```
+
+- ts 中递归最多只能 999 次
