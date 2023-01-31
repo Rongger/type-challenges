@@ -67,9 +67,9 @@ type ObjectToUnion<T> = T[keyof T];
 
 #### 其他
 
-- ts 类型系统里面 number 转 string 的方法：`${number|bigint}`
+- ts 类型系统里面 number 转 string 的方法：`` `${number|bigint}` ``
 
-- string 转 number 的方法：`${infer A extends number}`，但是要在 ts@v4.8.0+ 才支持
+- string 转 number 的方法：`` `${infer A extends number}` ``，但是要在 ts@v4.8.0+ 才支持
 
 - 可以使用泛型来定义新变量
 
